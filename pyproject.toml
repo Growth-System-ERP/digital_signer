@@ -1,0 +1,25 @@
+[project]
+name = "digital_signer"
+authors = [
+    { name = "IBSL", email = "luckytamrakar.01@gmail.com"}
+]
+description = "Version 14 Digital sign"
+requires-python = ">=3.10"
+readme = "README.md"
+dynamic = ["version"]
+dependencies = [
+    # "frappe~=15.0.0"  # Installed and managed by Bench.
+    "pyHanko[opentype]>=0.18.0",
+    "cryptography>=41.0.0",
+    "pypdf>=5.4.0",
+    "PyPDF2>=2.1.1",
+    "qrcode>=8.1.0"
+]
+
+[build-system]
+requires = ["flit_core >=3.4,<4"]
+build-backend = "flit_core.buildapi"
+
+# These dependencies are only installed when developer mode is enabled
+[tool.bench.dev-dependencies]
+# package_name = "~=1.1.0"
